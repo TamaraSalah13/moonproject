@@ -6,6 +6,14 @@
  
 :root{
     --primrayColor:#19213D;
+    --primrayfont:inter;
+ }
+ body{
+    font-family: var(--primrayfont);
+ }
+
+ h1,h2,h3,h4,h5,h6{
+    font-family: "EB Garamond", serif;
  }
 .header{
     
@@ -48,10 +56,11 @@
     gap:24px;
 }
 
-a{
+.header a{
     text-decoration: none;
     font-family: "Inter", sans-serif;
-    color:var(--primrayColor);    
+    color:var(--primrayColor);  
+    font-family:var(--primrayfont);  
 }
 @media screen and  (min-width: 0) and (max-width: 996px) {
     .list {
@@ -113,9 +122,142 @@ h2{
 
 @media screen and  (min-width: 771px) and (max-width: 900px){
    .collection{
-    width:calc((100% - 60px)/3);
+    width:calc( ( 100% - 60px ) /3 );
     
        
 }
     
 }
+
+.best_sellers{
+    text-align: center;
+    padding: 80px 0;
+
+}
+.best_sellers .row{
+    gap:30px;
+}
+.best_sellers .items{
+    text-align: left;
+     width: calc(( 100% - 90px )/4);
+}
+.best_sellers .item-content{
+    margin-top:24px ;
+   
+}
+
+
+.best_sellers h2{
+    
+font-weight: 700;
+font-style: bold;
+font-size: 30px;
+text-transform: uppercase;
+letter-spacing: 3px;
+margin-bottom: 48px;
+}
+
+.best_sellers h3{
+    
+font-weight:500;
+font-size: 14px;
+text-transform: uppercase;
+letter-spacing: 2px;
+margin-top: 12px;
+}
+
+.best_sellers .price{
+font-weight: 500;
+font-size: 20px;
+}
+
+.best_sellers .descrption{
+    color:#908ca8;
+    width: 80%;
+    line-height: 22px;
+    margin-top: 24px;
+    margin-bottom: 38px;
+}
+
+.best_sellers .add_to_cart{
+    padding: 15px 81px;
+    background-color: #fff;
+    border: 1px solid #000;
+    letter-spacing: 3px;
+    font-size: 14px;
+    font-weight: 600;
+    text-transform: uppercase;
+    width: 100%;
+}
+
+
+
+
+@media screen and  (min-width: 0) and (max-width: 400px) {
+
+    
+    .best_sellers .items{
+
+    width:100%;
+    }
+     .best_sellers .add_to_cart{
+    padding: 15px 18px;
+     font-size: 12px;
+     letter-spacing: 1px;
+
+    
+    }
+}
+
+@media screen and  (min-width: 401px) and (max-width: 700px) {
+
+    
+    .best_sellers .items{
+
+    width: calc( ( 100% - 30px )/2 );
+         
+    }
+
+.best_sellers .add_to_cart{
+    padding: 14px 40px;
+      font-size: 10px;
+     letter-spacing:;
+     
+    }
+
+.best_sellers h3{
+    
+font-weight:500;
+font-size: 14px;
+letter-spacing: 2px;
+
+}
+
+.best_sellers .price{
+
+font-size: 14px;
+}
+
+.best_sellers .descrption{
+    
+    font-size: 14px;
+}
+
+}
+
+@media screen and  (min-width: 701px) and (max-width: 950px) {
+
+    
+    .best_sellers .items{
+
+     width: calc( ( 100% - 60px )/3 );
+
+         
+    }
+    .best_sellers .add_to_cart{
+    padding: 14px 40px;
+    }
+
+}
+
+ 
