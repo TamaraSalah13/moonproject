@@ -106,9 +106,16 @@
        
 }
 
+
+/*.collection-section img{
+    width: 100%;
+}*/
+
+
 img{
     width: 100%;
 }
+    
 
 h2{
     margin-top: 23px;
@@ -220,14 +227,16 @@ h2{
 }
 }
 
-@media screen and  (min-width:951px) and (max-width: 1500px)
+@media screen and  (min-width: 951px) and (max-width: 1500px)
 {
+    
+ .cards .cards-content {
+    
+    grid-template-columns: repeat(2,1fr);
 
-    .cards-content{
-         grid-template-columns: repeat(2,1fr);
+}
 
-    }
-  
+
 } 
 
 
@@ -352,4 +361,3 @@ font-size: 14px;
 
 }
 
- 
