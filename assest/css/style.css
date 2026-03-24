@@ -18,6 +18,9 @@
 .header{
     
     padding: 21.84px 0px; 
+    position: fixed;
+    width: 100%;
+    background-color: #fff;
 
 }
 .menu{
@@ -25,14 +28,11 @@
     
 }
 
-
-
 .contanier{
     width:calc( 100% - 20% );
     margin: 0 auto;
 
 }
-
 
 .row{
     display: flex;
@@ -54,6 +54,9 @@
     display: flex;
   
     gap:24px;
+}
+.icons a{
+    cursor: pointer;
 }
 
 .header a{
@@ -78,6 +81,17 @@
     width: 50px;
 } 
 }
+.hero{
+
+    background-image: url('./../img/flat-lay-composition-different-sized-plates\ 1.png') ;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100vh;
+    display: flex;
+    flex-shrink: 0;
+    background-attachment: fixed;
+
+}
     
 
 .collection-section{
@@ -91,6 +105,7 @@
     text-align: center;
        
 }
+
 img{
     width: 100%;
 }
@@ -128,6 +143,95 @@ h2{
 }
     
 }
+.cards-content{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    align-items: center;
+    justify-content: center;
+     background-color: #F7F6F5;
+}
+.card-item{
+    text-align: center;
+}
+.card-item h2{
+    font-size: 28px;
+    font-weight: 700;
+    font-style: bold;
+    line-height: 28px;
+    letter-spacing: 4%;
+    margin: 64px 78.5px 24px 78.5px;
+}
+.card-item p{
+    color:#595667;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    margin:0 83px 32px 83px ;
+}
+.card-item .shop-now{
+    padding: 15px 18px;
+    text-decoration: underline;
+    text-transform: capitalize;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 20px;
+    border: 0;
+    margin-bottom:64px;
+
+}
+
+
+@media screen and  (min-width: 0) and (max-width: 400px){
+    .cards-content{
+    
+    grid-template-columns: repeat(1,1fr);
+    
+}
+.card-item h2{
+    
+    
+    margin: 50px 16px 16px 24px;
+}
+.card-item p{
+    
+    margin:0 20.5px 32px 20.5px;
+}
+.card-item .shop-now{
+    padding: 15px 18px;
+    margin-bottom: 50px;
+}
+}
+
+@media screen and  (min-width: 401px) and (max-width: 700px){
+
+    .cards-content{
+    
+    grid-template-columns: repeat(1,1fr);
+    
+}
+}
+
+@media screen and  (min-width: 701px) and (max-width: 950px) {
+
+    .cards-content{
+    
+    grid-template-columns: repeat(1,1fr);
+
+}
+}
+
+@media screen and  (min-width:951px) and (max-width: 1500px)
+{
+
+    .cards-content{
+         grid-template-columns: repeat(2,1fr);
+
+    }
+  
+} 
+
+
+
 
 .best_sellers{
     text-align: center;
@@ -137,10 +241,15 @@ h2{
 .best_sellers .row{
     gap:30px;
 }
+
 .best_sellers .items{
     text-align: left;
-     width: calc(( 100% - 90px )/4);
+     /*width: calc(( 100% - 90px )/4);*/
+     width: 250px;
+     flex-grow: 1;
+     
 }
+
 .best_sellers .item-content{
     margin-top:24px ;
    
@@ -154,7 +263,7 @@ font-style: bold;
 font-size: 30px;
 text-transform: uppercase;
 letter-spacing: 3px;
-margin-bottom: 48px;
+margin-bottom: 24px;
 }
 
 .best_sellers h3{
@@ -194,12 +303,7 @@ font-size: 20px;
 
 
 @media screen and  (min-width: 0) and (max-width: 400px) {
-
     
-    .best_sellers .items{
-
-    width:100%;
-    }
      .best_sellers .add_to_cart{
     padding: 15px 18px;
      font-size: 12px;
@@ -207,22 +311,15 @@ font-size: 20px;
 
     
     }
+
 }
 
 @media screen and  (min-width: 401px) and (max-width: 700px) {
 
-    
-    .best_sellers .items{
-
-    width: calc( ( 100% - 30px )/2 );
-         
-    }
 
 .best_sellers .add_to_cart{
     padding: 14px 40px;
       font-size: 10px;
-     letter-spacing:;
-     
     }
 
 .best_sellers h3{
@@ -248,12 +345,7 @@ font-size: 14px;
 @media screen and  (min-width: 701px) and (max-width: 950px) {
 
     
-    .best_sellers .items{
-
-     width: calc( ( 100% - 60px )/3 );
-
-         
-    }
+    
     .best_sellers .add_to_cart{
     padding: 14px 40px;
     }
